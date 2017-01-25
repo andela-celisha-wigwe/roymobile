@@ -1,0 +1,15 @@
+1. transform all scss from frontend_ui using css-loader in webpack to style objects for the mobile app
+2. Move all the components from frontend ui for mobile
+3. usign git submodules to share repo/code between frontend ui and  mobile (e.g the utils folder)
+4. google:  http://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext
+
+https://medium.com/javascript-scene/javascript-es6-var-let-or-const-ba58b8dcde75#.kz0h1gus6
+From agustin to Everyone: (12:31 pm)
+https://facebook.github.io/react-native/docs/pixelratio.html
+From agustin to Everyone: (12:38 pm)
+https://facebook.github.io/react-native/docs/layout-props.html
+From agustin to Everyone: (12:53 pm)
+https://facebook.github.io/react-native/docs/text.html
+https://facebook.github.io/react-native/docs/view.html
+From agustin to Everyone: (12:58 pm)
+https://facebook.github.io/react-native/docs/running-on-device.html
