@@ -13,3 +13,6 @@ https://facebook.github.io/react-native/docs/text.html
 https://facebook.github.io/react-native/docs/view.html
 From agustin to Everyone: (12:58 pm)
 https://facebook.github.io/react-native/docs/running-on-device.html
+https://facebook.github.io/react-native/docs/navigator.html
+http://stackoverflow.com/questions/30905769/change-view-in-navigator-in-react-native
+https://www.amazon.es/Refactoring-Improving-Design-Existing-Technology/dp/0201485672
