@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { AppRegistry, StyleSheet, TouchableHighlight, Text, View } from 'react-native'
 
-import styles from './styles'
+import styles from '../styles'
 
 export default class SubforumCard extends Component {
 
@@ -15,7 +15,6 @@ export default class SubforumCard extends Component {
 	}
 
 	handleShowSubforum (event) {
-		console.log("I am here touch", this.props.subforum)
 		this.props.navigator.replace({
 			id: "SubforumView",
 			params: {

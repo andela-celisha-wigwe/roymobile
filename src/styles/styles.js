@@ -25,4 +25,8 @@ export default StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  TextInput: {
+    height: 100,
+    width: 400,
+  }
 });

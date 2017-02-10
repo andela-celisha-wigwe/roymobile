@@ -6,12 +6,12 @@
 
 import React, { Component } from 'react';
 
-import SubforumCard from './SubforumCard'
+import SubforumCard from '../cards/SubforumCard'
 
-import SubforumAction from './actions/subforum_action'
-import SubforumStore from './stores/subforum_store'
+import SubforumAction from '../../shared/actions/subforum_action'
+import SubforumStore from '../../shared/stores/subforum_store'
 
-import SubforumAPI from "../utils/subforum"
+import SubforumAPI from "../../shared/utils/subforum"
 
 import {
   AppRegistry,
@@ -33,6 +33,7 @@ export default class extends Component {
   }
 
   componentDidMount() {
+    console.log("component did mount")
     this.unsubscribe = SubforumStore.listen(this.onSubforums)
     SubforumAction.listSubforums()
 
@@ -49,7 +50,19 @@ export default class extends Component {
     // })
   }
 
+  // componentWillUpdate(nextProps, nextState) {
+  //   // console.log("compoennt wil mount")
+  //   // this.unsubscribe = SubforumStore.listen(this.onSubforums)
+  //   // SubforumAction.listSubforums()
+    
+  //   console.log(nextProps.uid, nextState.uid, "here", "compoennt wil update")
+  //   if (nextProps.uid !== this.props.uid) { // check whehter the current props's uid is different from theat of the previous props uid.
+  //     SubforumAction.listSubforums()
+  //   }
+  // }
+
   onSubforums (subforums) {
+    console.log("checking the state of the app", subforums.length, "this is the lengt hof the subforums")
     this.setState({
       subforums
     })
@@ -60,8 +73,6 @@ export default class extends Component {
   }
 
   render() {
-    console.log("I am home view here")
-    
     const subforums = this.state.subforums.length > 0 ? this.state.subforums.map((subforum) => {
       return <SubforumCard navigator={this.props.navigator} key={subforum._id["$oid"]} subforum={subforum} />
     }) : null;

@@ -12,13 +12,13 @@ import {
   ScrollView
 } from 'react-native';
 
-import SubforumStore from './stores/subforum_store'
-import SubforumAction from './actions/subforum_action'
-import SubforumCard from './SubforumCard'
+import SubforumStore from '../../shared/stores/subforum_store'
+import SubforumAction from '../../shared/actions/subforum_action'
+import SubforumCard from '../cards/SubforumCard'
 
 // import PostAction from '../actions/post_action'
 // import PostStore from '../stores/post_store'
-import PostCard from './PostCard'
+import PostCard from '../cards/PostCard'
 
 
 

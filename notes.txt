@@ -16,3 +16,8 @@ https://facebook.github.io/react-native/docs/running-on-device.html
 https://facebook.github.io/react-native/docs/navigator.html
 http://stackoverflow.com/questions/30905769/change-view-in-navigator-in-react-native
 https://www.amazon.es/Refactoring-Improving-Design-Existing-Technology/dp/0201485672
+
+Event loops
+http://abdelraoof.com/blog/2015/10/28/understanding-nodejs-event-loop/
+http://stackoverflow.com/questions/779379/why-is-settimeoutfn-0-sometimes-useful/4575011#4575011
+https://thomashunter.name/blog/the-long-road-to-asyncawait-in-javascript

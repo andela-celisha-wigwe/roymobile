@@ -13,8 +13,8 @@ import {
   Button,
 } from 'react-native';
 
-import SubforumStore from './stores/subforum_store'
-import SubforumAction from './actions/subforum_action'
+import SubforumStore from '../../shared/stores/subforum_store'
+import SubforumAction from '../../shared/actions/subforum_action'
 
 const styles = StyleSheet.create({
   container: {
@@ -46,11 +46,32 @@ export default class extends Component {
 			description: ""
 		}
 		this.handleCreateSubforum = this.handleCreateSubforum.bind(this)
+		this.onCreateSubforum = this.onCreateSubforum.bind(this)
 	}
 
-	handleCreateSubforum (event) {
-		console.log(this.state, "hihihihihi")
-		SubforumAction.createSubforum(this.state)
+	async handleCreateSubforum (event) {
+		await SubforumAction.createSubforum(this.state)
+		// this.props.navigator.replace({
+		// 	id: "HomePageView"
+		// })
+
+	}
+
+	componentDidMount() { 
+		// using this because the handleCreateSubforum (await) is not finishing on time
+		// and the next (function -> to list all subforums) is being called, but without 
+		// the newly created subforum.
+		this.unsubscribe = SubforumStore.listen(this.onCreateSubforum)
+	}
+
+	componentWillUnmount() {
+		this.unsubscribe()
+	}
+
+	onCreateSubforum () {
+		this.props.navigator.replace({
+			id: "HomePageView"
+		})
 	}
 
 	render () {
