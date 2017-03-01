@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
+    "snap": "jest -u",
     "watch-android": "nodemon -w . --exec \"react-native run-android\"",
     "watch-ios": "nodemon -w . --exec \"react-native run-ios\""
   },
