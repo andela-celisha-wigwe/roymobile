@@ -7,5 +7,7 @@
 		"appUrl": "http://192.168.2.1:3000"
 	},
 
-	"production": {}
+	"production": {
+		"appUrl": "royforums.herokuapp.com"
+	}
 }
